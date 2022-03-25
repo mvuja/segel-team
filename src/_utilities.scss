@@ -1,0 +1,36 @@
+:root{
+    --primary-color: #c4132f;
+    --txt-color: #717171;
+  }
+
+.container{
+    padding: 0 3rem;
+    max-width: 150rem;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 6.6rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #000;
+    line-height: 1.6;
+}
+
+h3{
+    font-size: 5rem;
+    color: #000;
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: 2rem;
+    color: #000;
+    text-transform: uppercase;
+}
