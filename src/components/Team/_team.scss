@@ -2,6 +2,7 @@
     position: relative;
     background: #000;
     padding-top: 30rem;
+    padding-bottom: 5rem;
     margin-top: -20rem;
 
     h3{
@@ -21,5 +22,111 @@
         height: 1px;
         background: rgba(255, 255, 255, 0.384);
         margin: 0rem auto;
+    }
+
+    .filtration{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        margin: 7rem 0;
+
+        button{
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+    }
+
+
+    .container{
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .member-container{
+            position: relative;
+
+            .member-main{
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    transition: filter .3s ease;
+                    margin-bottom: -2px;
+                }
+            }
+
+            .member-hover{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: #e5eaee;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                padding: 2rem;
+                width: 100%;
+                z-index: -1;
+                transition: left .3s ease;
+
+                .member-name{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #000;
+                    text-transform: uppercase;
+                }
+                
+                .member-duties{
+                    font-size: 1.5rem;
+                    color: #000;
+                }
+            }
+
+            &:hover{
+                .member-hover{
+                    left: 100%;
+                }
+            }
+
+            &:nth-child(5n+5):hover{
+                .member-hover{
+                    left: -100%;
+                }
+            }
+
+        }
+
+
+
+        &:hover .member-container:hover{
+            z-index: 2;
+            .member-main img{
+                filter: grayscale(0%);
+            }
+        }
+
+        &:hover .member-container{
+            z-index: 1;
+            .member-main img{
+                filter: grayscale(100%);
+            }
+        }
+
+    }
+
+    .load-more-btn{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #fff;
+        background: transparent;
+        border: 2px solid #fff;
+        padding: 2rem 3.5rem;
+        margin: 5rem auto 0;
+        display: block;
     }
 }
