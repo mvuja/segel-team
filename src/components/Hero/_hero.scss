@@ -5,6 +5,24 @@
     background-size: cover;
     clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
     -webkit-clip-path: polygon(100% 0, 100% 87%, 50% 100%, 0 87%, 0 0);
+    position: relative;
+
+    @media only screen and (max-width: 768px) {
+        clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+        -webkit-clip-path: polygon(100% 0, 100% 90%, 50% 100%, 0 90%, 0 0);
+
+        &::before{
+            content: "";
+            position: absolute;
+            background: linear-gradient(to bottom, #000000af, #0000003d);
+            inset: 0;
+            z-index: -1;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        min-height: 60rem;
+    }
 
     .container{
         text-align: right;
@@ -13,12 +31,27 @@
         height: 100%;
         padding-top: 25rem;
 
+        @media only screen and (max-width: 768px) {
+            text-align: center;
+        }
+
         h1{
             margin-bottom: 1rem;
+
+            @media only screen and (max-width: 768px) {
+                color: #e4203d;
+            }
         }
         h2{
             max-width: 50rem;
             margin-left: auto;
+            
+            @media only screen and (max-width: 768px) {
+                color: #e5eaee;
+                margin-right: auto;
+            }
         }
+
+
     }
 }

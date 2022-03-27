@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;600;700;800&display=swap');
 
 ::selection{
-  background: #435CFE;
+  background: var(--primary-color);
   color: #fff;
 }
 
@@ -31,20 +31,20 @@ display: block;
 
 // SCROLLBAR
 
-html::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: .5vw;
 }
 
-html::-webkit-scrollbar-track {
-  background: var(--primary-color);
-}
-
-html::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-track {
   background: #fff;
 }
 
-html::-webkit-scrollbar-thumb:hover {
-  background: #dadada;
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a00d23;
 }
 
 

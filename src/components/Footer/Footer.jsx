@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
 import './_footer.scss';
+import twitter from '../../Assets/twitter.png'
+import facebook from '../../Assets/facebook.png'
 
 const Footer = () => {
 
@@ -8,8 +9,12 @@ const Footer = () => {
             <div className="container">
                 <p className="copy">© 2021. Segel-Team. Alle Rechte vorbehalten</p>
                 <div className="social">
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <a href="https://twitter.com/" target="_blank">
+                        <img src={twitter} alt="Twitter" />
+                    </a>
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src={facebook} alt="Facebook" />
+                    </a>
                 </div>
                 <ul className="footer-menu">
                     <li><a href="#">Impressum</a></li>

@@ -25,19 +25,21 @@ const Navbar = () => {
 
     return (
         <nav className='nav-header'>
-            <div className={`hamburger ${mobileMenu}`} onClick={mobileMenuClick}>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+            <div className="container">
+                <div className={`hamburger ${mobileMenu}`} onClick={mobileMenuClick}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
-            <ul className={`nav-links ${mobileMenu}`}>
-                <li className="underline"><a href="#">About Us</a></li>
-                <li className="underline"><a href="#">Gallery</a></li>
-                <li className="underline"><a href="#">Crew</a></li>
-                <li className="underline"><a href="#">Kontakt</a></li>
-            </ul>
-            <div className="nav-logo"><img src={logo} alt="Logo" /></div>
+                <ul className={`nav-links ${mobileMenu}`}>
+                    <li className="underline"><a href="#">About Us</a></li>
+                    <li className="underline"><a href="#">Gallery</a></li>
+                    <li className="underline"><a href="#">Crew</a></li>
+                    <li className="underline"><a href="#">Kontakt</a></li>
+                </ul>
+                <div className="nav-logo"><img src={logo} alt="Logo" /></div>
+            </div>
         </nav>
     )
 }
